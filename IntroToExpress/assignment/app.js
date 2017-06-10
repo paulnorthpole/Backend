@@ -1,6 +1,9 @@
-
 var express = require("express");
 var app = express();
+
+// FOR C9.IO
+// var port = process.env.PORT;
+// var ip = process.env.IP;
 
 app.get("/", function (req, res) {
   res.send("Hi there, welcome to my assignment!");
@@ -42,3 +45,10 @@ app.get("*", function(req, res) {
 app.listen(3000, function () {
   console.log("Server has started!!!");
 });
+
+// FOR C9.IO
+// app.listen(process.env.PORT, process.env.IP, function () {
+// console.log("Server has started!!!");
+// console.log("Hosted on port: " + port);
+// console.log("Hosted at IP: " + ip);
+// });

@@ -1,0 +1,7 @@
+
+touch = create file
+
+mkdir = create folders
+
+rm = delete file
+-rf = to force delete folders and files
