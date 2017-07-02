@@ -35,6 +35,11 @@ passport.deserializeUser(User.deserializeUser());
 //**        PASSPORT CONFIGURATION          **
 //********************************************
 
+app.use(function(req, res, next) {
+  res.locals.currentUser = req.user;
+  next();
+});
+
 
 //========================
 //        ROUTES
