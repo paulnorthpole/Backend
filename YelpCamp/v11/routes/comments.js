@@ -5,7 +5,7 @@ var express    = require("express"),
     middleware = require("../middleware");
 
 //  Comments New
-router.get("/new", isLoggedIn, function(req, res) {
+router.get("/new", middleware.isLoggedIn, function(req, res) {
   // Find campground by id
   Campground.findById(req.params.id, function(err, campground) {
     if (err) {
